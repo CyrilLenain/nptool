@@ -176,7 +176,7 @@ G4IonizationWithDE::PostStepDoIt(const G4Track& aTrack, const G4Step& aStep)
     // Tracked electron produced
     // 100 per mm per step to have a good statistical accuracy
     
-    G4int tracked_electron = (aStep.GetStepLength()/mm)*5;
+    G4int tracked_electron = (aStep.GetStepLength()/mm)*50;
     
     //if no electron leave
     if(tracked_electron<1){
