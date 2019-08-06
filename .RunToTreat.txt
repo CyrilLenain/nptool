@@ -1,5 +1,0 @@
-TTreeName
- SimulatedTree
-RootFileName
- Outputs/Simulation/MINOS/th94_phi0.root
-
