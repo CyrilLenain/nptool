@@ -146,7 +146,6 @@ void Dali::AddDetector2(double  R, double  Alpha, double  Zeta, string  Shape){
  void Dali::DefinitionMaterials()
  {
     //G4Element* H       = new G4Element("Hydrogen","H" , 1., 1.01*g/mole);
-    
     G4Isotope* Mg24 = new G4Isotope ("Mg24", 12, 24, 23.985041*g/mole);
     G4Isotope* Mg25 = new G4Isotope ("Mg25", 12, 25, 24.985836*g/mole);
     G4Isotope* Mg26 = new G4Isotope ("Mg26", 12, 26, 25.982592*g/mole);
@@ -173,7 +172,6 @@ void Dali::AddDetector2(double  R, double  Alpha, double  Zeta, string  Shape){
     NaI_Tl = new G4Material("NaI_Tl",3.6667*g/cm3, 2);
     NaI_Tl->AddMaterial(MaterialManager::getInstance()->GetMaterialFromLibrary("NaI"), 99.6*perCent);
     NaI_Tl->AddElement(elTl, 0.4*perCent);
-
  }
 
 
@@ -182,23 +180,21 @@ void Dali::AddDetector2(double  R, double  Alpha, double  Zeta, string  Shape){
 
 G4LogicalVolume* Dali::BuildSquareDetector(){
   if(!m_SquareDetector){
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-
     G4Box* box_3can = new G4Box("Dali_3BoxCan", Dali_NS::Hight*0.5,
-                                Dali_NS::Width*0.5*3, Dali_NS::Thickness*0.5 + Dali_NS::LengthPMT/2.+11.5/2.*mm /*last part is PMTVolume*/ );
+                                 Dali_NS::Width*0.5*3,
+                                 Dali_NS::Thickness*0.5 + Dali_NS::LengthPMT/2.+11.5/2.*mm );// last part is pmt's volume
+    
     G4Material* Aria = MaterialManager::getInstance()->GetMaterialFromLibrary("Air");
     Logic_ArrayDali_1 = new G4LogicalVolume(box_3can,Aria,"logic_ArrayDali",0,0,0);
 
     Logic_ArrayDali_1->SetVisAttributes(G4VisAttributes(G4Colour(1,1,1, 0)));
-
     
     G4Box* box_can = new G4Box("Dali_BoxCan", Dali_NS::Hight*0.5,
                                Dali_NS::Width*0.5, Dali_NS::Thickness*0.5);
 
     G4Box* box_canandPMT = new G4Box("Dali_BoxCan", Dali_NS::Hight*0.5,
-                               Dali_NS::Width*0.5, Dali_NS::Thickness*0.5 + Dali_NS::LengthPMT/2.+11.5/2.*mm /*last part is PMTVolume*/ );
+                               Dali_NS::Width*0.5, 
+                               Dali_NS::Thickness*0.5 + Dali_NS::LengthPMT/2.+11.5/2.*mm );
  
     std::vector<G4TwoVector> polygon;
     polygon.push_back(G4TwoVector(Dali_NS::Hight*0.5, Dali_NS::Width*0.5*3.  )  ) ;
@@ -209,7 +205,6 @@ G4LogicalVolume* Dali::BuildSquareDetector(){
     // std::vector<ZSection> zsection;
     // zsection.push_back(ZSection (Dali_NS::Thickness*0.5, {0,0}, 1. ) );
     // zsection.push_back(ZSection (-Dali_NS::Thickness*0.5-19.5*2.*mm , {0,0}, 1. ) );
-
     
     G4Box* Extrudedbox_can  = new G4Box("Dali_BoxCan", Dali_NS::Hight*0.5,Dali_NS::Width*0.5, Dali_NS::LengthPMT/2.+11.5/2.*mm);
 
@@ -261,34 +256,32 @@ G4LogicalVolume* Dali::BuildSquareDetector(){
 
 
      // PMT Volume -
-    new G4PVPlacement(0, positionnull,
-                      lAlPMT ,
-                      "AlPMT",
-                      lMuPMT,
-                      false,
-                      0);
-    new G4PVPlacement(0, G4ThreeVector(0,0, -11.5/2.*mm ),
-                      lMuPMT ,
-                      "MuPMT",
-                      AriaExtrude,
-                      false,
-                      0);
+    /* new G4PVPlacement(0, positionnull, */
+    /*                   lAlPMT , */
+    /*                   "AlPMT", */
+    /*                   lMuPMT, */
+    /*                   false, */
+    /*                   0); */
+    /* new G4PVPlacement(0, G4ThreeVector(0,0, -11.5/2.*mm ), */
+    /*                   lMuPMT , */
+    /*                   "MuPMT", */
+    /*                   AriaExtrude, */
+    /*                   false, */
+    /*                   0); */
     
     
-    new G4PVPlacement(0, positionnull,
-                      lGlassPMT,
-                      "GlassPMT",
-                      lTopPlatePMT,
-                      false,
-                      0);
-    new G4PVPlacement(0,  G4ThreeVector(0,0, Dali_NS::LengthPMT/2. ),
-                      lTopPlatePMT,
-                      "TopPlatePMT",
-                      AriaExtrude,
-                      false,
-                      0);
-
-
+    /* new G4PVPlacement(0, positionnull, */
+    /*                   lGlassPMT, */
+    /*                   "GlassPMT", */
+    /*                   lTopPlatePMT, */
+    /*                   false, */
+    /*                   0); */
+    /* new G4PVPlacement(0,  G4ThreeVector(0,0, Dali_NS::LengthPMT/2. ), */
+    /*                   lTopPlatePMT, */
+    /*                   "TopPlatePMT", */
+    /*                   AriaExtrude, */
+    /*                   false, */
+    /*                   0); */
 
     new G4PVPlacement(0,  G4ThreeVector(0,0, -Dali_NS::Thickness*0.5 ),
                       AriaExtrude,
@@ -296,41 +289,29 @@ G4LogicalVolume* Dali::BuildSquareDetector(){
                       m_Square2Detector_Can,
                       false,
                       0);
-
-
-
-
     new G4PVPlacement(0,  G4ThreeVector(0,0, Dali_NS::LengthPMT/2.+11.5/2.*mm ),
                       m_SquareDetector_Can,
                       "DetectorVolume",
                       m_Square2Detector_Can,
                       false,
                       0);
-
-
-
-
-    
-                                                
-    
     // MgO Volume -
     new G4PVPlacement(0, positionnull,
-                                             m_SquareDetector_CanMgO,
-                                             "MgO",
-                                             m_SquareDetector_Can,
-                                             false,
-                                             0); 
+      m_SquareDetector_CanMgO,
+      "MgO",
+      m_SquareDetector_Can,
+      false,
+      0); 
     G4VisAttributes* MgO_Attributes = new G4VisAttributes(G4Colour(1,1,1, .3));
     m_SquareDetector_CanMgO->SetVisAttributes(MgO_Attributes);
-
     
     // NaI Volume -
     new G4PVPlacement(0, positionnull,
-                                                 m_SquareDetector_Crystal,
-                                                 "CrystalNaI",
-                                                 m_SquareDetector_CanMgO,
-                                                 false,
-                                                 0); 
+      m_SquareDetector_Crystal,
+      "CrystalNaI",
+      m_SquareDetector_CanMgO,
+      false,
+      0); 
 
     m_SquareDetector_Crystal->SetVisAttributes(m_VisSquare);
     m_SquareDetector_Crystal->SetSensitiveDetector(m_DaliScorer);
@@ -342,19 +323,15 @@ G4LogicalVolume* Dali::BuildSquareDetector(){
     //                                              m_SquareDetector_CanMgO,
     //                                              false,
     //                                              0); 
-
-
                                                 
     new G4PVReplica("DaliArrayElement",
-                                                        m_Square2Detector_Can,
-                                                        Logic_ArrayDali_1 ,
-                                                        kYAxis,
-                                                        3,
-                                                        Dali_NS::Width,    //?????????
-                                                        0);
+      m_Square2Detector_Can,
+      Logic_ArrayDali_1 ,
+      kYAxis,
+      3,
+      Dali_NS::Width,    //?????????
+      0);
 
-
-       
   }
   
   return Logic_ArrayDali_1;
@@ -387,7 +364,6 @@ void Dali::ReadConfiguration(NPL::InputParser parser){
     cout << "//// " << blocks.size() << " detectors found " << endl; 
 
   vector<string> cart = {"POS","Shape"};
-  vector<string> sphe = {"R","Theta","Phi","Shape"};
   vector<string> cyli = {"R","Alpha","Zeta","Shape"};
 
   for(unsigned int i = 0 ; i < blocks.size() ; i++){
@@ -399,15 +375,7 @@ void Dali::ReadConfiguration(NPL::InputParser parser){
       string Shape = blocks[i]->GetString("Shape");
       AddDetector(Pos,Shape);
     }
-    else if(blocks[i]->HasTokenList(sphe)){
-      if(NPOptionManager::getInstance()->GetVerboseLevel())
-        cout << endl << "////  Dali " << i+1 <<  endl;
-      double R = blocks[i]->GetDouble("R","mm");
-      double Theta = blocks[i]->GetDouble("Theta","deg");
-      double Phi = blocks[i]->GetDouble("Phi","deg");
-      string Shape = blocks[i]->GetString("Shape");
-      AddDetector(R,Theta,Phi,Shape);
-    }
+
     else if(blocks[i]->HasTokenList(cyli)){
       if(NPOptionManager::getInstance()->GetVerboseLevel())
         cout << endl << "////  Dali " << i+1 <<  endl;
@@ -431,43 +399,30 @@ void Dali::ReadConfiguration(NPL::InputParser parser){
 // Called After DetecorConstruction::AddDetector Method
 void Dali::ConstructDetector(G4LogicalVolume* world){    
 
-
   DefinitionMaterials();
-  
   for (unsigned short i = 0 ; i < m_R.size() ; i++) {
-
     G4double wX = m_R[i] * cos(m_Alpha[i] ) ; 
     G4double wY = m_R[i] * sin(m_Alpha[i] ) ;
     G4double wZ = m_Zeta[i];
     if(m_Zeta[i]<0) wZ = wZ - Dali_NS::LengthPMT/2.+11.5/2.*mm;
     else wZ = wZ + Dali_NS::LengthPMT/2.+11.5/2.*mm;
     G4ThreeVector Det_pos = G4ThreeVector(wX, wY, wZ) ;
-
-
     
     G4RotationMatrix* Rot = new G4RotationMatrix();
-
-
-
 
     Rot->rotateX(180*deg);
     if(m_Zeta[i]<0){
       Rot->rotateY(180*deg); Rot->rotateZ(m_Alpha[i]); 
     } else{Rot->rotateZ(m_Alpha[i]);}
-
-   
     if(m_Shape[i] == "Cylindrical"){
       new G4PVPlacement(G4Transform3D(*Rot,Det_pos),
           BuildCylindricalDetector(),
           "Dali",world,false,i+1);
     }
-
     else if(m_Shape[i] == "Square"){
       new G4PVPlacement(G4Transform3D(*Rot,Det_pos),
                         BuildSquareDetector(),
           "Dali",world,false,i+1);
-
-     
     }
   }
 }
@@ -490,14 +445,11 @@ void Dali::InitializeRootOutput(){
 void Dali::ReadSensitive(const G4Event* ){
    m_Event->Clear();
   ///////////
-
   
   // Calorimeter scorer
   CalorimeterScorers::PS_Calorimeter* Scorer= (CalorimeterScorers::PS_Calorimeter*) m_DaliScorer->GetPrimitive(0);
 
   //cout << m_DaliScorer->GetNumberOfPrimitives()<<endl;
-
-  
   unsigned int size = Scorer->GetMult();
   for(unsigned int i = 0 ; i < size ; i++){
     vector<unsigned int> level = Scorer->GetLevel(i); 

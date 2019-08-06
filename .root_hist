@@ -1,0 +1,335 @@
+q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Dali2proton.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos1.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY","fMinos_Pad_DriftTime","colz")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos1.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY","fMinos_DriftTime","colz")
+setColor(51)
+setcolor(51)
+gStyle->SetPalette(51,colors)
+gStyle->SetPalette(51)
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_1evt.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY","fMinos_DriftTime","colz")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY(85,-100,100,85,-100,100)","fMinos_DriftTime","colz")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(85,-100,100,85,-100,100)","fMinos_DriftTime","colz")
+gStyle->SetPalette(51)
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(80,-100,100,80,-100,100)","fMinos_DriftTime","colz")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(80,-100,100,80,-100,100)","fMinos_PadCharge","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos1.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(80,-100,100,80,-100,100)","fMinos_PadCharge","colz")
+gStyle->SetPalette(51)
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(80,-100,100,80,-100,100)","fMinos_PadCharge","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(80,-100,100,80,-100,100)","fMinos_PadCharge","colz")
+gStyle->SetPalette(51)
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_1evt.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(80,-100,100,80,-100,100)","fMinos_PadCharge","colz")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_PadCharge","colz")
+gStyle->SetPalette(51)
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos.root")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos1.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+gStyle->SetPalette(51)
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_PadCharge","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos.root")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos1.root")
+TBrowser q
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/test.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/test.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/test.root")
+SimulatedTree->Draw("fMinos_PadX:fMinos_PadY>>h(90,-100,100,90,-100,100)","fMinos_DriftTime","colz")
+.q
+TFile *_file0 = TFile::Open("NPData/NPTreeRawdata_570_570.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_1000eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_100eve.root")
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/TEST.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/myResult.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/TEST.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/test.root")
+TBrowser q
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Test.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Test.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Test.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("NPData/NPTreeRawdata_570_570.root")
+TBrowser q
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_50eve.root")
+TBrowser q
+.
+.Q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_1000eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Experiment.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_1eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_1eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_50000eve.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_10000_th93.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Minos_1eve.root")q
+:q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Eperiment_500000.root")
+TBrowser q
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Eperiment_500000.root")
+PhysicsTree->Draw("sumTheta:Zvertex>>h(100,-20,150,100,60,130)")
+PhysicsTree->Draw("sumTheta:Zvertex>>h(100,-20,150,100,60,130)","","colz")
+gStyle->SetPalette(51)
+PhysicsTree->Draw("sumTheta:Zvertex>>h(100,-100,150,100,60,130)","","colz")
+PhysicsTree->Draw("sumTheta:Zvertex>>h(100,-100,150,100,60,130)","","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Eperiment_500000.root")
+:q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Experiment.root")
+PhysicsTree->Draw("sumTheta:Zvertex>>h(100,-100,150,100,60,130)","","colz")
+TFile *_file0 = TFile::Open("Outputs/Analysis/Experiment.root")
+PhysicsTree->Draw("Zvertex")
+PhysicsTree->Draw("Zvertex>>h(200,-20,200)")
+PhysicsTree->Draw("Zvertex-47>>h(200,-20,200)")
+PhysicsTree->Draw("Zvertex-57.16>>h(200,-20,200)")
+PhysicsTree->Draw("sumTheta:Zvertex-57.16>>h(200,-20,200,200,60,120)")
+PhysicsTree->Draw("sumTheta:Zvertex-57.16>>h(200,-20,200,200,60,120)","","colz")
+gStyle->SetPalette(51)
+PhysicsTree->Draw("sumTheta:(-Zvertex+57.16+300)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("sumTheta:(-Zvertex+300)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("sumTheta:(-Zvertex+150)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("sumTheta:(Zvertex)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("sumTheta:(-(Zvertex-57.16)+300)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("sumTheta:(-(Zvertex-57.16))>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("sumTheta:(-(Zvertex-57.16)+150)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(-sumTheta+200):(-(Zvertex-57.16)+150)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(sumTheta):(-(Zvertex-57.16)+150)>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.16))>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(-sumTheta+100):((Zvertex-57.16))>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(-sumTheta+200):((Zvertex-57.16))>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.16))>>h(200,-20,200,200,60,120)","","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.16))>>h(200,-20,200,200,60,150)","","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.16))>>h(200,-20,200,200,60,130)","","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.16))>>h(200,-20,200,200,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+exit
+exit
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Experiment.root")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/run570_analysed.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Eperiment_500000.root")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.16))>>h(200,-20,200,200,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/run570_analysed.root")
+PhysicsTree->Draw("(sumTheta):((Zvertex))>>h(200,-20,200,200,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Experiment.root")
+PhysicsTree->Draw("(sumTheta):((Zvertex))>>h(200,-20,200,200,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertexi-57.4))>>h(200,-20,200,200,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.4))>>h(200,-20,200,200,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+gStyle->SetPalette(51)
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.4))>>h(100,-20,200,100,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.4))>>h(100,-20,200,100,60,130)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.4))>>h(100,-20,200,100,65,125)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.4))>>h(100,-20,200,100,65,125)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+PhysicsTree->Draw("(sumTheta):((Zvertex-57.4))>>h(100,-20,200,100,65,125)","abs(Xvertex)<20 && abs(Yvertex)<20","colz")
+h->SetMinimum(10)
+.q
+npt
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_VaccumTarget.root")
+TBrowser q
+.q 
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_VaccumTarget.root")
+TBrowser q
+x2.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_Vaccum_flat_10000.root")
+TBrowser q
+.q
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_Vaccum_th93_10000.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/Minos_Vaccum_th93_5000.root")
+TBrowser q
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/flat.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/th94.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Analysis/DaliMinos_th94.root")
+TBrowser q 
+TFile *_file0 = TFile::Open("Outputs/Simulation/DaliMinos_th94.root")
+TBrowser q
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/MINOS/flat.root")
+TBrowser q
+TBrowser q0q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Test.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/MINOS/flat.root")
+TBrowser q
+.q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Test.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/Test2.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/flat.root")
+TBrowser q
+SimulatedTree->Draw("Theta1:Zvertex")
+PhysicsTree->Draw("Theta1:Zvertex")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/th94.root")
+PhysicsTree->Draw("Theta1:Zvertex")
+PhysicsTree->Draw("Theta1")
+PhysicsTree->Draw("Theta1")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/th94.root")
+PhysicsTree->Draw("Theta1")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/flat.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/PhysicsTree.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/myResult.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/MINOS/th94.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/MINOS/th94.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Analysis/MINOS/th94.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/MINOS/th94.root")
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/MINOS/th94.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/MINOS/th94.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/MINOS/th94.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Simulation/MINOS/th94.root")
+TBrowser q
+.q
+TFile *_file0 = TFile::Open("Outputs/Analysis/MINOS/th94_phi0.root")
+TBrowser q
+TFile *_file0 = TFile::Open("Outputs/Analysis/test.root")
+TBrowser q
+.q
+.q
