@@ -4,12 +4,12 @@ Beam
  Particle= 1H 
  ExcitationEnergy= 0
  Energy= 180
- SigmaEnergy= 0.
- SigmaThetaX= 0.0 
- SigmaPhiY= 0.0
- SigmaX= 0.0 
+ SigmaEnergy= 0.448
+ SigmaThetaX= 0.01 
+ SigmaPhiY= 0.01
+ SigmaX= 0.01 
  %0.5
- SigmaY= 0.0 
+ SigmaY= 0.01 
  %0.5
  MeanThetaX= 0
  MeanPhiY= 0
@@ -26,8 +26,7 @@ TwoBodyReaction
  Heavy= 1H
  ExcitationEnergyLight= 0.0
  ExcitationEnergyHeavy= 0.0
-% CrossSectionPath= flat.txt CSR
- CrossSectionPath= 1H_1H_155MeV.txt CSR
+ CrossSectionPath= flat.txt CSR
  ShootLight= 1
  ShootHeavy= 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,5 +1,0 @@
-TTreeName
- SimulatedTree
-RootFileName
- ../Outputs/Simulation/Minos_50eve.root
-
